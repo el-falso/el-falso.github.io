@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.use-site-title %}
+      {{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}
+    {% elsif page.title %}
+      {{ page.title }} | {{site.name}}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+  <script src="https://kit.fontawesome.com/176ba3718a.js"></script>
+  <!--<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">-->
+  <!-- <link rel="stylesheet" href="/assets/css/fix.css"> -->
+  <link href="/assets/css/all.min.css" rel="stylesheet"> <!--load all styles -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+  <script type="text/javascript" src="/assets/js/lightbox.js"></script>
+  <link rel="stylesheet" href="/assets/css/lightbox.css">
+  <!--<link href="https://unpkg.com/sanitize.css" rel="stylesheet" />-->
+</head>

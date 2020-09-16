@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for link in site.data.skills %}
+<div class="skill-title">{{ link.id }}</div>
+<div class="progress">
+  <div class="progress-{{ link.xp }}"></div>
+</div>
+{% endfor %}

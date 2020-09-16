@@ -1,0 +1,51 @@
+---
+layout: default
+title: Games
+---
+
+
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </div>
+    </a>
+    <p class="post-meta">
+        <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+            {{ post.date | date_to_string }}
+        </time>        
+        {% if post.last_modified_at %}
+            (Updated: <time datetime="{{ post.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ post.last_modified_at | date: "%b %-d, %Y" }}</time>)
+        {% endif %}
+        {%- if post.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>
+        {%- endif -%}
+    </p>
+</div>
+{%- comment -%} <hr> {%- endcomment -%}
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<div class="pager">
+    {% if paginator.previous_page %}
+        <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Newer Posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &raquo;</a>
+    {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,11 @@
+<nav class="nav fixed-top">
+<span class="right">
+  <label for="hamburger"><i class="hamburger fas fa-bars"></i></label>
+  <input type="checkbox" id="hamburger"/>
+  {% for link in site.data.navigation %}
+  <div class="menu-item">
+    <a href="{{ link.url }}"><i class="{{ link.icon}}"></i> {{ link.title }}</a>
+  </div>
+  {% endfor %}
+  </span>
+</nav>

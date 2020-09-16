@@ -1,0 +1,73 @@
+@function progress-color($red, $green, $blue) {
+  $color: rgb(255 * (1 - $red), 255 * $green, 255 * $blue);
+  @return $color;
+}
+
+.progress {
+  background: $black;
+  border-radius: 2px;
+  height: 5px;
+  margin-bottom: .5em;
+  margin-top: .125em;
+  width: 100%;
+
+  .progress-1 {
+    background-color: progress-color(.1, .1, .1);
+    height: 100%;
+    width: 10%;
+  }
+
+  .progress-2 {
+    background-color: progress-color(.2, .2, .1);
+    height: 100%;
+    width: 20%;
+  }
+
+  .progress-3 {
+    background-color: progress-color(.3, .3, .2);
+    height: 100%;
+    width: 30%;
+  }
+
+  .progress-4 {
+    background-color: progress-color(.4, .4, .2);
+    height: 100%;
+    width: 40%;
+  }
+
+  .progress-5 {
+    background-color: progress-color(.5, .5, .3);
+    height: 100%;
+    width: 50%;
+  }
+
+  .progress-6 {
+    background-color: progress-color(.6, .6, .3);
+    height: 100%;
+    width: 60%;
+  }
+
+  .progress-7 {
+    background-color: progress-color(.7, .7, .4);
+    height: 100%;
+    width: 70%;
+  }
+
+  .progress-8 {
+    background-color: progress-color(.8, .8, .4);
+    height: 100%;
+    width: 80%;
+  }
+
+  .progress-9 {
+    background-color: progress-color(.9, .9, .5);
+    height: 100%;
+    width: 90%;
+  }
+
+  .progress-10 {
+    background-color: progress-color(1, 1, .5);
+    height: 100%;
+    width: 100%;
+  }
+}

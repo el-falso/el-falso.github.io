@@ -1,0 +1,25 @@
+games:
+  title: Games
+  list:
+    - title: Castle Attack [prototype]
+      url: /projects/castle-attack-prototype.html
+      image: /assets/images/castle-attack-banner.png
+      year: 2019
+
+    - title: Dark PonBul
+      url: /projects/dark-ponbul.html
+      image: "/assets/images/dark-ponbul-banner.png"
+      year: 2017
+
+tools:
+  title: Tools
+  list:
+    - title: Aseprite LUA Scripts
+      url: /projects/aseprite-lua-scripts.html
+      image: /assets/images/aseprite-lua-scripts-banner.png
+      year: 2018
+
+    - title: Monaki Theme
+      url: /projects/monaki-theme.html
+      image: /assets/images/monaki-banner.png
+      year: 2017

@@ -1,0 +1,27 @@
+- id: PixelArt
+  description:
+  xp: 3
+
+- id: Composing
+  description:
+  xp: 3
+
+- id: GML
+  description: GameMaker Language
+  xp: 6
+
+- id: HTML
+  description: Hypertext Markup Language
+  xp: 4
+
+- id: SASS
+  description: Syntactically Awesome Style Sheets
+  xp: 3
+
+- id: Python
+  description: Python
+  xp: 3
+
+- id: LUA
+  description: LUA
+  xp: 1

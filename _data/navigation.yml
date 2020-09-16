@@ -1,0 +1,23 @@
+# Site navigation links
+
+- title: Home
+  url: /
+  excerpt: "Everything you need to know to get started with Skinny Bones and Jekyll."
+  icon: fas fa-home
+
+- title: Projects
+  url: /projects/
+  excerpt: "Everything you need to know to get started with Skinny Bones and Jekyll."
+  icon: fas fa-gamepad
+
+- title: Art
+  url: /art/
+  icon: fas fa-palette
+
+- title: Blog
+  url: /blog/
+  icon: fas fa-blog
+
+- title: Imprint
+  url: /imprint.html
+  icon: fas fa-address-card

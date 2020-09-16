@@ -1,0 +1,62 @@
+.nav .right {
+    > label .hamburger {
+        display: none;
+    }
+    
+    #hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site-content {
+        max-width: 90%;
+    }
+    .nav {
+        display: block;
+        margin: 0 0;
+        max-width: 100%;
+        position: sticky;
+        text-align: justify;
+        padding: 0;
+
+        .right {
+            display: block;
+            max-width: 100%;
+            margin: 0 0;
+            text-align: right;
+            position: sticky;
+        }
+
+        .right label {
+        display: inline-block;
+        color: $white;
+        background: $pink;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+
+            > .hamburger {
+                display: block;
+            }
+        }
+    }
+    .menu-item {
+        display: none;
+
+        > a {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            border-top: 1px solid $violet;
+        }
+    }
+    
+    .nav .right input:checked ~ .menu-item { display: block;}
+
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}

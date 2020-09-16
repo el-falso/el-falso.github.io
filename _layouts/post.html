@@ -1,0 +1,32 @@
+---
+layout: default
+disqus: false
+archive: false
+post_class: post-template
+---
+
+<div class="post">
+    {{ content }}
+    <p class="post-meta">
+        <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">
+            {{ page.date | date_to_string }}
+        </time>        
+        {% if page.last_modified_at %}
+            (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+        {% endif %}
+        {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        {%- endif -%}
+    </p>
+</div>
+
+
+            <div class="pager row PageNavigation d-flex justify-content-between font-weight-bold">
+            {% if page.previous.url %}
+            <a class="previous" href="{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo; </a>
+            {% endif %}
+            {%- comment -%} <div class="clearfix"></div> {%- endcomment -%}
+            </div>
